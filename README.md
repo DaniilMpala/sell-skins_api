@@ -3,7 +3,7 @@
 - *apikey*: ****
 - *domain*: http://167.235.201.24
 
-в Header: {authorization: Bearer *apikey*}
+в Header: {authorization: Bearer *apikey*} и  {content-type: application/json}
 
 ## Основные эндпоинты
 
