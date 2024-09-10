@@ -95,13 +95,13 @@
 
 **Параметры запроса:**
 {
-  "typeTransaction": "Integration CobaltLab Sell Skin",
-  "fullName": "Full Name",
-  "walletNumber": "Wallet Number",
-  "email": "Email Address",
+  "typeTransaction": "Integration CobaltLab Sell Skin", (именно так)
+  "fullName": "Full Name", (опционально)
+  "walletNumber": "Wallet Number", (опционально)
+  "email": "Email Address", (опционально)
   "tradeurl": "Trade URL",
-  "telegramContact": "Telegram Contact",
-  "paymentId": -1,
+  "telegramContact": "Telegram Contact", (опционально)
+  "paymentId": -1, (именно так)
   "items": [
     {
       "appid": "App ID",
