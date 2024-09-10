@@ -110,7 +110,7 @@
       "appid": "App ID",
       "contextid": "Context ID",
       "assetid": "Asset ID",
-      "priceBuy": "Optional price"
+      "priceBuy": "price"
     }
   ]
 }
