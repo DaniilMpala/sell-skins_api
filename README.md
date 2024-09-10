@@ -17,6 +17,7 @@
 - `game` (необязательный): ID игры (730 - CS:GO, 570 - Dota 2, 440 - TF2, 252490 - Rust)
 
 **Ответ:**
+```json
 [
   {
     "hash_name": "Festivized Dream Piped Brass Beast (Field-Tested)",
@@ -24,6 +25,7 @@
     "allowed": false
   }
 ]
+```
 
 - `priceBuy`: `null` | `number` (float)
 - `allowed`: `boolean`
