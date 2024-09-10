@@ -47,6 +47,7 @@
 - `contextid` (обязательный): ID контекста
 
 **Ответ:**
+```json
 [
   {
     "stickers": [
@@ -69,7 +70,7 @@
     "allowed": "Optional boolean"
   }
 ]
-
+```
 **Примечание:** Используйте `/api/steam/inventory/refresh` для обновления инвентаря только при первом запросе или по запросу пользователя. Не используйте при каждом открытии вкладки инвентаря из-за ограничений рейтлимита Steam.
 
 #### 2.2 Обновление инвентаря
@@ -96,6 +97,7 @@
 **Метод:** POST
 
 **Параметры запроса:**
+```json
 {
   "typeTransaction": "Integration CobaltLab Sell Skin", (именно так)
   "fullName": "Full Name", (опционально)
@@ -113,8 +115,9 @@
     }
   ]
 }
-
+```
 **Ответ:**
+```json
 {
   "typeResp": "success" | "error",
   "textResp": "Response text",
@@ -124,8 +127,10 @@
   "status": "Optional Status",
   "createdAt": "Optional Creation Timestamp"
 }
+```
 
 **Пример успешного ответа:**
+```json
 {
   "typeResp": "success",
   "textResp": "Транзакция создана",
@@ -135,12 +140,14 @@
   "status": "create",
   "createdAt": 172556.... (в миллисекундах)
 }
+```
 
 **Примечание:** В этой ручке будет проверка цен. Если переданные цены выше чем цены в базе, вернет ошибку.
 
 ### 4. Коллбэки и статусы трейдов
 
 **PayLoad:**
+```json
  {
     SteamID: string;
     date: Date;
@@ -166,4 +173,4 @@
         priceOnTransaction: number;
     }[];
 }
-
+```
