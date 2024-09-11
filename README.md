@@ -1,7 +1,7 @@
 # API Документация
 
 - *apikey*: ****
-- *domain*: http://167.235.201.24
+- *domain*: https://sell-skins.ru/
 
 в Header: {authorization: Bearer *apikey*} и  {content-type: application/json}
 
