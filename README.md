@@ -121,13 +121,13 @@
 {
   "typeResp": "success" | "error",
   "textResp": 'Ошибка создания трейда'
-                        | 'No bot found'
-                        | 'No cookies found for the selected bot' "TradeBan"
-                        | "NewDevice"
-                        | "TargetCannotTrade"
-                        | "OfferLimitExceeded"
-                        | "ItemServerUnavailable"
-                        | <Будет ошибка на английском> ,
+                | 'No bot found'
+                | 'No cookies found for the selected bot' "TradeBan"
+                | "NewDevice"
+                | "TargetCannotTrade"
+                | "OfferLimitExceeded"
+                | "ItemServerUnavailable"
+                | <Будет ошибка на английском> ,
   "SteamIDBot": "Optional Steam Bot ID",
   "tradeId": "Optional Trade ID",
   "transactionId": "Optional Transaction ID",
