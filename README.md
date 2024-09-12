@@ -203,6 +203,13 @@
   "error":  'Not valid tradeUrl' 
 	  | 'The service is temporarily unavailable for checking' 
 	  | `Hold ${days} day`
-	  | <"You cannot trade with cc235 because they have a trade ban.">
+	  | <"You cannot trade with cc235 because they have a trade ban.">,
+"code": number,
 }
 ```
+**Code:**
+- `0` : Все ок
+- `1` : У нас проблемы, не можем проверить, пиши КОДЕРУ!
+- `2` : Холд у юзера
+- `3` : Почему то не может принять трейд в error написан ответ стима
+- `4` : Не валидна отправленная ссылка
