@@ -143,6 +143,8 @@
 {
   "typeResp": "success",
   "textResp": "Транзакция создана",
+  "nicknameBot": "string";
+  "dateRegBot": "2024-09-11T07:11:41.749Z";
   "SteamIDBot": "7656119954....",
   "tradeId": "73681....",
   "transactionId": 15,
