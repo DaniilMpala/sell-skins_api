@@ -186,3 +186,22 @@
     }[];
 }
 ```
+
+### 5. Проверка доступности трейда
+
+**Эндпоинт:** `/api/steam/trade/check
+
+**Метод:** GET
+
+**Параметры запроса Query:**
+- `url ` (обязательный): трейд ссылка полная!
+
+**Ответ:** 
+```json
+{
+  "allow": boolean,
+  "error":  'Not valid tradeUrl' 
+			  | 'The service is temporarily unavailable for checking' 
+			  | <"You cannot trade with cc235 because they have a trade ban.">
+}
+```
