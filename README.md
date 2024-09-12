@@ -128,6 +128,8 @@
                 | "OfferLimitExceeded"
                 | "ItemServerUnavailable"
                 | <Будет ошибка на английском> ,
+  "nicknameBot": "string";
+  "dateRegBot": "2024-09-11T07:11:41.749Z";
   "SteamIDBot": "Optional Steam Bot ID",
   "tradeId": "Optional Trade ID",
   "transactionId": "Optional Transaction ID",
