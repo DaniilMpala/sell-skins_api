@@ -201,7 +201,8 @@
 {
   "allow": boolean,
   "error":  'Not valid tradeUrl' 
-			  | 'The service is temporarily unavailable for checking' 
-			  | <"You cannot trade with cc235 because they have a trade ban.">
+	  | 'The service is temporarily unavailable for checking' 
+	  | `Hold ${days} day`
+	  | <"You cannot trade with cc235 because they have a trade ban.">
 }
 ```
