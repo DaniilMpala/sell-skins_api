@@ -129,6 +129,8 @@
                 | "ItemServerUnavailable"
                 | <Будет ошибка на английском> ,
   "nicknameBot": "string";
+  lvlSteamBot: number;
+  avatarBot: string;
   "dateRegBot": "2024-09-11T07:11:41.749Z";
   "SteamIDBot": "Optional Steam Bot ID",
   "tradeId": "Optional Trade ID",
@@ -143,6 +145,8 @@
 {
   "typeResp": "success",
   "textResp": "Транзакция создана",
+  lvlSteamBot: number;
+  avatarBot: string;
   "nicknameBot": "string";
   "dateRegBot": "2024-09-11T07:11:41.749Z";
   "SteamIDBot": "7656119954....",
