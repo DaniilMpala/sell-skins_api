@@ -106,6 +106,7 @@
   "telegramContact": "Telegram Contact", (опционально)
   "paymentId": -1, (именно так)
   "externalId": "string", (опционально)
+  "externalMessage": "string", (опционально)
   "items": [
     {
       "appid": "App ID",
@@ -171,6 +172,7 @@
     statusTradeNumber: number;
     offerId: string;
     externalId?: string;
+    externalMessage?: string;
     items: {
         assetId: string;
         classid?: string | null;
