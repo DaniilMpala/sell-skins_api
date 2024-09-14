@@ -137,9 +137,33 @@
   "tradeId": "Optional Trade ID",
   "transactionId": "Optional Transaction ID",
   "status": "Optional Status",
-  "createdAt": "Optional Creation Timestamp"
+  "createdAt": "Optional Creation Timestamp",
+  items: Skin[];
 }
 ```
+
+class Skin {
+  id: number;
+  assetId: string;
+  classid: string;
+  instanceid: string;
+  hash_name: string;
+  float: number | null;
+  paint_index: number | null;
+  paint_seed: number | null;
+  icon_url: string;
+  rungame: string;
+  color: string;
+  stickers: Array<any>;
+  createdAt: string;
+  SteamID: string;
+  appid: string;
+  contextid: string;
+  priceOnTransaction: number;
+  tradeId: number;
+  userId: number;
+  botid: string;
+};
 
 **Пример успешного ответа:**
 ```json
@@ -155,6 +179,7 @@
   "transactionId": 15,
   "status": "create",
   "createdAt": 172556.... (в миллисекундах)
+   items: Skin[];
 }
 ```
 
