@@ -256,7 +256,7 @@ class Skin {
 {}
 ```
 
-### 7. Првоерка доступности сайта
+### 7. Проверка доступности сайта
 
 **Эндпоинт:** `/api/transaction/integration/stats
 
@@ -281,7 +281,7 @@ class Skin {
                 "totalcost": 0.24
             },
             {
-                "status": "paymenting <это то что оижают выплаты>",
+                "status": "paymenting <это то что ожидают выплаты>",
                 "totalcost": 1.5
             }
         ]
