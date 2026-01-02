@@ -4,10 +4,12 @@
 - [Внутренняя Интеграция](./Внутренняя%20интеграция.md)
 
 
-API Документация
-apikey: ****
-domain: cobaltskins.tech
-в Header: {authorization: Bearer apikey} и {content-type: application/json}
+# API Документация
+
+- *apikey*: ****
+- *domain*: cobaltskins.tech
+
+в Header: {authorization: Bearer *apikey*} и  {content-type: application/json}
 
 ### 1. Получение цен скупки
 
