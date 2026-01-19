@@ -7,7 +7,7 @@
 # API Документация
 
 - *apikey*: ****
-- *domain*: cobaltskins.tech
+- *domain*: sellskin.ru 
 
 в Header: {authorization: Bearer *apikey*} и  {content-type: application/json}
 
