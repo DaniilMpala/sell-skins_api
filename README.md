@@ -66,14 +66,30 @@ class PricesDtoReturn {
 **После Отмены/Принятия (в том числе в холд)**
   
 Мы будем отсылать коллбек до тех пор, пока вы не ответите ответом 200 на запрос.
+### Описание полей сделки
 
-meta - это как раз та самая вашая мета дата, котоыре вы нам отправили при создании транзакции.
+- **`meta`** — метаданные, которые вы передаёте при создании транзакции  
+  *(та самая meta data, отправленная при инициализации трейда)*
 
-isAccept - трейд принят окончательно
-isCancel - это значит была отмена трейда Declined || Expired || Canceled || CanceledBySecondFactor || InvalidItems || Countered
-isProtect - трейд принят но в холде, либо если это кс в Protect статусе ожидания 8 дней либо если у юзера отключен аантификатор был
-statusTradeNumber - это номер оффера в [стиме ETradeOfferState]([./Внешняя%20интеграция.md](https://developer.valvesoftware.com/wiki/Steam_Web_API/IEconService#ETradeOfferState))  
-statusTrade - перевд номер оффера в текстовый формат:
+- **`isAccept`** — трейд окончательно принят
+
+- **`isCancel`** — трейд был отменён в одном из следующих состояний:
+  - `Declined`
+  - `Expired`
+  - `Canceled`
+  - `CanceledBySecondFactor`
+  - `InvalidItems`
+  - `Countered`
+
+- **`isProtect`** — трейд принят, но находится в холде:
+  - либо в статусе **Protect** (ожидание 8 дней для CS),
+  - либо у пользователя был отключён аутентификатор
+
+- **`statusTradeNumber`** — номер состояния оффера в Steam  
+  Соответствует enum [`ETradeOfferState`](https://developer.valvesoftware.com/wiki/Steam_Web_API/IEconService#ETradeOfferState)
+
+- **`statusTrade`** — текстовое представление `statusTradeNumber`
+
 ```
 "1": "Invalid",
 "2": "Active",
