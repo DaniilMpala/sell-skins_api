@@ -76,6 +76,8 @@ class PricesDtoReturn {
 - **`currency`** — в данном поле приходит зафиксированный курс валют на момент начало транзакции, можеет умножать на него cost и получать сумму в валюте другой
 
 - **`isAccept`** — трейд окончательно принят
+- 
+- **`settlementDate`** — время прохождение протекта, в миллисекундах, оно опцимонально!
 
 - **`isCancel`** — трейд был отменён в одном из следующих состояний:
   - `Declined`
@@ -118,6 +120,7 @@ export class CallbackDto {
     cost: number;
     statusTrade: string;
     statusTradeNumber: number;
+    settlementDate?: number;
     offerId: string;
     meta?: any;
     currency?: Record<string, number>; //пример данных {"EUR": 90.5625, "USD": 79.0246}
