@@ -89,20 +89,22 @@ class PricesDtoReturn {
   Соответствует enum [`ETradeOfferState`](https://developer.valvesoftware.com/wiki/Steam_Web_API/IEconService#ETradeOfferState)
 
 - **`statusTrade`** — текстовое представление `statusTradeNumber`
+#### Возможные значения `statusTrade`
 
-```
-"1": "Invalid",
-"2": "Active",
-"3": "Accepted",
-"4": "Countered",
-"5": "Expired",
-"6": "Canceled",
-"7": "Declined",
-"8": "InvalidItems",
-"9": "CreatedNeedsConfirmation",
-"10": "CanceledBySecondFactor",
-"11": "InEscrow",
-```
+| Код | Статус                     | Описание |
+|-----|----------------------------|----------|
+| 1   | `Invalid`                  | Некорректный или несуществующий оффер |
+| 2   | `Active`                   | Активный трейд, ожидает действий |
+| 3   | `Accepted`                 | Трейд успешно принят |
+| 4   | `Countered`                | Сделано встречное предложение |
+| 5   | `Expired`                  | Истёк по времени |
+| 6   | `Canceled`                 | Отменён пользователем |
+| 7   | `Declined`                 | Отклонён второй стороной |
+| 8   | `InvalidItems`             | Некорректные или недоступные предметы |
+| 9   | `CreatedNeedsConfirmation` | Создан, требуется подтверждение |
+| 10  | `CanceledBySecondFactor`   | Отменён из-за второго фактора (2FA) |
+| 11  | `InEscrow`                 | В холде (Escrow / Protect) |
+
 
 
 ```ts
