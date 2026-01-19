@@ -111,7 +111,10 @@ class PricesDtoReturn {
 | 10  | `CanceledBySecondFactor`   | Отменён из-за второго фактора (2FA) |
 | 11  | `InEscrow`                 | В холде (Escrow / Protect) |
 
-
+Один из вариантов, как можно обрабатывать, это отслеживать поля isAccept, isCancel, isProtect всегда будет заполнено, одно из них. 
+- Если isAccept - зачисляете баланс
+- Если isCancel - отмена трейда
+- Если isProtect - трейд в холде, в течение 8-15дней придет новый коллбек с статусом одним из выше
 
 ```ts
 export class CallbackDto {
