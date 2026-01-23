@@ -118,7 +118,7 @@ class PricesDtoReturn {
 
 ```ts
 export class CallbackDto {
-    SteamID: string;
+    SteamID: string; //Продающего
     date: Date;
     cost: number;
     statusTrade: string;
