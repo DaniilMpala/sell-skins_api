@@ -192,3 +192,6 @@ export class CallbackDto {
 }
 ```
 
+### Заголовки которые отправляет наш сервер:
+- **`Content-Type: application/json`** — всегда такой
+- **`X-Signature: <sha256>`** — Сигнатура подписывается вашим apikey + payloadJson. Пример: мы имеем json объект, это payload который мы отпарвляем вам в примере выше, мы делаем его строкой с помощью JSON.stringify(), превращаем его в вид: '{"cost":0.289,"date":"2025-10-03T16:17...' и создаем сигнатуру <sha256> с помощью функции шифрования (crypto.createHmac('sha256', apikey).update(payloadJson).digest('hex'))
