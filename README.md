@@ -203,3 +203,61 @@ export class CallbackDto {
   crypto.createHmac('sha256', apikey).update(payloadJson).digest('hex')
   ```
 
+### 3. Статистика интеграции
+
+**Эндпоинт:** `/api/integration/stats/mine`
+
+**Метод:** GET
+
+**Авторизация:** Требуется JWT токен (роль `integration`).
+
+**Ответ:**
+```json
+{
+  "payouts": {
+    "totalPaid": 1500,
+    "creditAmount": 500,
+    "creditAmountWithProtect": 700
+  },
+  "periodStats": {
+    "last24h": {
+      "success": { "total": 10, "games": { "730": 8, "440": 2 } },
+      "protect": { "total": 2, "games": { "730": 2, "440": 0, "570": 0, "252490": 0 } },
+      "cancel": { "total": 1, "games": { "570": 1, "440": 0, "730": 0, "252490": 0 } }
+    },
+    "last7d": { ... },
+    "allTime": { ... }
+  }
+}
+```
+
+**Тип:**
+```ts
+export type AppId = '440' | '730' | '570' | '252490';
+
+export class PeriodStatsItem {
+    total: number; // Общее количество транзакций в этом статусе
+    games: Record<AppId, number>; // Количество транзакций с разбивкой по appid игры
+}
+
+export class PeriodStats {
+    success: PeriodStatsItem; // Данные по успешным транзакциям
+    protect: PeriodStatsItem; // Данные по защищенным транзакциям (в холде)
+    cancel: PeriodStatsItem; // Данные по отмененным транзакциям
+}
+
+export class IntegrationPayoutStats {
+    totalPaid: number; // Общая сумма уже произведенных выплат
+    creditAmount: number; // Сумма к выплате (все успешные - выплаты)
+    creditAmountWithProtect: number; // Сумма к выплате включая холд (успешные + защищенные - выплаты)
+}
+
+export class IntegrationStatsDto {
+    payouts: IntegrationPayoutStats; // Сводка по финансам и выплатам
+    periodStats: {
+        last24h: PeriodStats; // Статистика за последние 24 часа
+        last7d: PeriodStats; // Статистика за последние 7 дней
+        allTime: PeriodStats; // Статистика за всё время
+    };
+}
+```
