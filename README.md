@@ -209,8 +209,6 @@ export class CallbackDto {
 
 **Метод:** GET
 
-**Авторизация:** Требуется JWT токен (роль `integration`).
-
 **Ответ:**
 ```json
 {
