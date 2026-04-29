@@ -19,20 +19,13 @@
 
 **Тип Query запроса:**
 
+GET /api/skins-updater/prices?game=730&hash_names=StatTrak™ Desert Eagle | Firebreathing (Battle-Scarred)&hash_names=StatTrak™ Desert Eagle | Firebreathing (Battle-Scarred)
+
 ```ts
 export class GetPricesDto {
     game: '730' | '570' | '440' | '252490';
     withCountSell: boolean = false; 
-}
-```
-
-**Пример Body запроса:**
-
-Стим айди или трейд ссылку необходимо передать, чтобы мы понимали, что человек депозитит именно с этого аккаунта а не с левого.  
-```json
-{
-  "game": "730",
-  "withCountSell": false
+    hash_names?: string[];
 }
 ```
 
